@@ -1,0 +1,55 @@
+.container-home {
+    background-image: url('../../assets/image/bg-login.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+    .btn-create {
+        background-image: linear-gradient(to right, #FF512F 0%, #F09819 51%, #FF512F 100%);
+        margin: 10px;
+        padding: .6rem .5rem;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        border: none;
+        display: block;
+        cursor: pointer;
+    }
+
+    .btn-create:hover {
+        background-position: right center;
+        /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+    }
+
+}
+
+
+// .btn-create {
+//     background-image: linear-gradient(to right, #FF512F 0%, #F09819 51%, #FF512F 100%);
+//     margin: 10px;
+//     padding: 15px 45px;
+//     text-align: center;
+//     text-transform: uppercase;
+//     transition: 0.5s;
+//     background-size: 200% auto;
+//     color: white;
+//     box-shadow: 0 0 20px #eee;
+//     border-radius: 10px;
+//     display: block;
+// }
+
+// .btn-create:hover {
+//     background-position: right center;
+//     /* change the direction of the change here */
+//     color: #fff;
+//     text-decoration: none;
+// }

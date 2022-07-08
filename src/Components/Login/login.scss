@@ -1,0 +1,101 @@
+.login-container {
+    width: 100vw;
+    min-height: 100vh;
+    margin-top: 0rem !important;
+    background-image: url('../../assets/image/bg-login.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: .2rem .2rem 2rem 0rem #9b7222;
+
+    .container-form {
+        width: 80%;
+        min-height: 10rem;
+        background-color: #ffffff93;
+        border-radius: 1rem;
+
+        .header-login-form {
+            width: 80%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+
+            img {
+                width: 60%;
+                margin-top: 1rem;
+            }
+
+            .title-login {
+                font-family: 'Rye', cursive;
+                color: rgb(109, 56, 56);
+            }
+        }
+
+
+    }
+}
+
+@media(min-width:799px) {
+
+    .header-login-form {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+
+        img {
+            width: 40%;
+            margin-top: 1rem;
+        }
+
+        .title-login {
+            font-family: 'Rye', cursive;
+            color: #b13209;
+            font-size: 2rem;
+        }
+    }
+}
+
+
+@media(min-width:999px) {
+    .container-form {
+        width: 60% !important; 
+
+        .header-login-form {
+            width: 60%;
+
+            img {
+                width: 30% !important;
+                margin-top: 1rem;
+            }
+
+            .title-login {
+                font-family: 'Rye', cursive;
+                color: #b13209;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media(min-width:1300px) {
+    .container-form {
+        width: 30rem !important;
+        min-height: 15rem;
+        background-color: #c5000093;
+        border-radius: 1rem;
+
+
+
+
+    }
+}
