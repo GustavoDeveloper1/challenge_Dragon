@@ -1,15 +1,13 @@
 .container-home {
-    background-image: url('../../assets/image/bg-login.jpg');
+    background-image: url("../../assets/image/bg-login.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 
-
-
     .btn-create {
-        background-image: linear-gradient(to right, #FF512F 0%, #F09819 51%, #FF512F 100%);
+        background-image: linear-gradient(to right, #ff512f 0%, #f09819 51%, #ff512f 100%);
         margin: 10px;
-        padding: .6rem .5rem;
+        padding: 0.6rem 0.5rem;
         text-align: center;
         text-transform: uppercase;
         transition: 0.5s;
@@ -30,8 +28,90 @@
         text-decoration: none;
     }
 
+    .componente-body {
+        width: 100%;
+        min-height: 4rem;
+        margin-bottom: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        gap: 1rem;
+
+        .componente-item {
+            width: 90%;
+            min-height: 4rem;
+            padding: 0.8rem;
+            border-radius: 1rem;
+            margin: 1rem auto;
+            box-shadow: 0.2rem 0.2rem 2rem 0.6rem #9b7222;
+
+            .image-dragon {
+                width: 80%;
+                min-height: 5rem;
+                margin: 0rem auto;
+                img {
+                    width: 100%;
+                }
+            }
+
+            .dragon-detail {
+                width: 90%;
+                height: auto;
+                padding: 0.8rem;
+
+                p {
+                    margin: 1rem auto;
+                    font: normal 500 1.2rem "Roboto", sans-serif;
+                }
+
+                .name-dragon {
+                    display: flex;
+                    align-items: center;
+
+
+                }
+
+                p b {
+                    font: normal 700 1.5rem "Roboto", sans-serif;
+                }
+
+                .icon {
+                    font-size: 1.3rem;
+                    margin-left: auto !important;
+                }
+            }
+        }
+    }
 }
 
+@media (min-width: 999px) {
+    .btn-create {
+        padding: 1rem 1rem !important;
+    }
+
+    .componente-body {
+        width: 90% !important;
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto;
+        gap: 1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .componente-body {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr !important;
+        grid-template-rows: auto;
+        gap: 1rem;
+
+        .dragon-detail  {
+            p b{ 
+                font-size: 1.3rem !important;
+            }
+        }
+    }
+}
 
 // .btn-create {
 //     background-image: linear-gradient(to right, #FF512F 0%, #F09819 51%, #FF512F 100%);

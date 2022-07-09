@@ -1,55 +1,88 @@
-import React, { useEffect, useState } from 'react'
-import { getAllDragons } from '../../services/dragonsServices';
+import React, { useEffect, useState } from 'react';
 
+import { getAllDragons } from '../../services/dragonsServices';
+import { FaRegEye } from 'react-icons/fa'
+import DefaultImg from '../../assets/image/defaultImg.jpg';
 import './home.scss';
+
+
+
 
 function Home() {
 
     const [dragons, setDragons] = useState([]);
+    const [modalshow, setmodalShow] = useState(false);
+    const [selectedDragon, setSelectedDragon] = useState<any | null>()
 
 
     useEffect(() => {
         getDragons();
     }, []);
 
+    const createdAt: any = []
+    dragons.forEach((dragon: any) => {
+
+        let data = dragon.createdAt.split("-")
+        let data1 = data[2]
+
+
+        let day = data1.substr(0, 2)
+
+        let month = data[1];
+        let year = data[0]
+
+        const date = `${day}-${month}-${year} `
+
+        createdAt.push(date)
+
+    })
+
 
     const getDragons = async () => {
         const result = await getAllDragons();
+
         setDragons(result.data);
+
+
     }
 
-    console.log("DRAGÕES", dragons)
+    const showDragonDetail = (dragon: any) => {
+
+        setSelectedDragon(dragon)
+        console.log(selectedDragon)
+        setmodalShow(!modalshow)
+    }
 
     return (
         <>
             <div className='container container-home'>
-
+                {/* <div className="header-container">
+                    <BiExit />
+                </div> */}
                 <div className="componente">
                     <div className="header">
                         <button className='btn btn-create'>Criar Dragão</button>
                     </div>
-                    <table className='table table-home'>
-                        <thead className='table-header table-home-header'>
-                            <tr>
-                                <td>Nome</td>
-                                <td>Tipo</td>
-                                <td>Data de Criação</td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </thead>
-                        <tbody className='table-body'>
-                            {/* {
-                                dragons.map((dragon: any) => (
-                                    <tr>
-                                        <td>{dragon.name}</td>
-                                        <td>{dragon.type}</td>
-                                        <td>{dragon.createdAt}</td>
-                                    </tr>
-                                ))
-                            } */}
-                        </tbody>
-                    </table>
+                    <div className='componente-body'>
+                        {dragons.map((dragon: any, i) => (
+                            <div className="componente-item">
+                                <div className="image-dragon">
+                                    <img src={DefaultImg} alt='Defalt' />
+                                </div>
+                                <div className="dragon-detail">
+
+
+                                    <p className="name-dragon" > <b>Nome :</b> {dragon.name}</p>
+
+
+                                    <p className='type-dragon'><b>Tipo:</b> {dragon.type}</p>
+                                    <p className='create-dragon'><b>Criado em: </b>{createdAt[i]}
+                                    </p>
+                                    <span><FaRegEye onClick={() => showDragonDetail(dragon)}className='icon' /></span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </>
