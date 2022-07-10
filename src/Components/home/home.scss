@@ -1,3 +1,15 @@
+.header-container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    align-items: center;
+    .icon-exit {
+        font-size: 2rem;
+    }
+}
+
 .container-home {
     background-image: url("../../assets/image/bg-login.jpg");
     background-position: center;
@@ -67,8 +79,6 @@
                 .name-dragon {
                     display: flex;
                     align-items: center;
-
-
                 }
 
                 p b {
@@ -105,8 +115,8 @@
         grid-template-rows: auto;
         gap: 1rem;
 
-        .dragon-detail  {
-            p b{ 
+        .dragon-detail {
+            p b {
                 font-size: 1.3rem !important;
             }
         }

@@ -13,6 +13,7 @@ function Rotas() {
                 <Route element={<Login />} exact={true} path="/" />
                 <Route path="/home" element={<Home />} />
                 <Route element={<CreatedDragon />} path="/createDragon" />
+   
                 <Route element={<ViewDragon />} path="/viewDragon/:id" />
                 <Route element={<EditDragon />} path="/viewDragon/edit/:id" />
             </Routes>

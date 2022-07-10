@@ -64,7 +64,10 @@
         background-color: transparent;
         border: 0.1rem #471702 solid;
         border-radius: 0.4rem;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
         color: #471702;
         font-family: "Rye", cursive;
         cursor: pointer;

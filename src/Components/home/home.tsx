@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 
 import { getAllDragons } from '../../services/dragonsServices';
-import { FaRegEye } from 'react-icons/fa'
+import { FaRegEye } from 'react-icons/fa';
+import { BiExit } from 'react-icons/bi'
 import DefaultImg from '../../assets/image/defaultImg.jpg';
 import './home.scss';
 
@@ -49,9 +50,9 @@ function Home() {
     return (
         <>
             <div className='container container-home'>
-                {/* <div className="header-container">
-                    <BiExit />
-                </div> */}
+                <div className="header-container">
+                    <a href="/">  <BiExit className='icon icon-exit' /></a>
+                </div>
                 <div className="componente">
                     <div className="header">
                         <a href={`/createDragon`} {...dragons} className='btn btn-create'>Criar Dragão</a>
@@ -71,7 +72,7 @@ function Home() {
                                     <p className='type-dragon'><b>Tipo:</b> {dragon.type}</p>
                                     <p className='create-dragon'><b>Criado em: </b>{createdAt[i]}
                                     </p>
-                                    <a href={`/viewDragon/${dragon.id}`}><FaRegEye  className='icon' /></a>
+                                    <a href={`/viewDragon/${dragon.id}`}><FaRegEye className='icon' /></a>
                                 </div>
                             </div>
                         ))}
