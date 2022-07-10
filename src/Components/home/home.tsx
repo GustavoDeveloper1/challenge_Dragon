@@ -7,7 +7,6 @@ import './home.scss';
 
 
 
-
 function Home() {
 
     const [dragons, setDragons] = useState([]);
@@ -46,12 +45,6 @@ function Home() {
 
     }
 
-    const showDragonDetail = (dragon: any) => {
-
-        setSelectedDragon(dragon)
-        console.log(selectedDragon)
-        setmodalShow(!modalshow)
-    }
 
     return (
         <>
@@ -61,7 +54,7 @@ function Home() {
                 </div> */}
                 <div className="componente">
                     <div className="header">
-                        <button className='btn btn-create'>Criar Dragão</button>
+                        <a href={`/createDragon`} {...dragons} className='btn btn-create'>Criar Dragão</a>
                     </div>
                     <div className='componente-body'>
                         {dragons.map((dragon: any, i) => (
@@ -78,13 +71,17 @@ function Home() {
                                     <p className='type-dragon'><b>Tipo:</b> {dragon.type}</p>
                                     <p className='create-dragon'><b>Criado em: </b>{createdAt[i]}
                                     </p>
-                                    <span><FaRegEye onClick={() => showDragonDetail(dragon)}className='icon' /></span>
+                                    <a href={`/viewDragon/${dragon.id}`}><FaRegEye  className='icon' /></a>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
+
+
             </div>
+
+
         </>
     )
 }

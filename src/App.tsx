@@ -1,15 +1,12 @@
 import React from 'react';
 import './assets/scss/App.scss';
-import CreatedDragon from './Components/CreatedDragon/CreatedDragon';
-// import Home from './Components/home/home';
-// import Login from './Components/Login/login';
+import Rotas from './Components/routes';
+
 
 function App() {
   return (
     <>
-      {/* <Login /> */}
-      {/* <Home/> */}
-      <CreatedDragon />
+      <Rotas />
     </>
 
 
